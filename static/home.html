@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Cyclone Home</title>
+    <script>
+        const xor = {
+          encode: (url) => encodeURIComponent(url.toString().split("").map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join("")),
+          decode: (url) => decodeURIComponent(url.split("?")[0]).split("").map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt(0) ^ 2) : char).join("") + (url.split("?").slice(1).length ? "?" + url.split("?").slice(1).join("?") : "")
+        }
+
+      function redAlert() {
+        top.window.NoGG('https://www.cnn.com/interactive/2019/06/us/dad-joke-generator-trnd/');
+      }
+
+      window.goToPage = function(page) {
+      	top.window.goToPage(page);
+      }
+    </script>
+    <style>
+        @font-face {
+            font-family: pro;
+            src: url('./fonts/Product.ttf');
+        }
+
+        @keyframes resizeIN {
+            0% {
+                transform: translateY(-3em);
+                height: 0;
+            }
+            50% {
+                height: 25em;
+            }
+            100% {
+                transform: translateY(0em);
+                height: 20em;
+            }
+        }
+
+        @keyframes rotating {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes shadow {
+            0% {
+                background-color:#3f89ff2e;
+                width: 60px;
+                height: 60px;
+                top: 15%;
+            }
+            50% {
+                background-color:#214dff6e;
+                width: 25px;
+                height: 25px;
+                top: 21%;
+            }
+            100% {
+                background-color: #3f89ff2e;
+                width: 60px;
+                height: 60px;
+                top: 15%;
+            }
+        }
+
+        h1, h2, h3, h4 {
+            margin: 0;
+        }
+
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            height: 100%;
+            margin: 0;
+            justify-items: center;
+            align-items: center;
+            background-color: #112442;
+        }
+
+        .home {
+            height: 0;
+            display: grid;
+            justify-items: center;
+            animation: resizeIN 500ms;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+
+        .logo {
+            width: 10em;
+            -webkit-animation: rotating 2s linear infinite;
+            -moz-animation: rotating 2s linear infinite;
+            -ms-animation: rotating 2s linear infinite;
+            -o-animation: rotating 2s linear infinite;
+            animation: rotating 2s linear infinite;
+        }
+
+        .url {
+            font-family: pro;
+            border: none;
+            background: #061328;
+            color: #3163b3;
+            height: 42px;
+            width: 14em;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            transition: 300ms ease;
+        }
+
+        .url:hover {
+            background: #0a1c39;
+            color: #3a78db;
+        }
+
+        .url:focus-visible {
+            outline: none;
+        }
+
+        .title, p, a {
+            color: #3163b3;
+            font-family: pro;
+            display: flex;
+            transition: 300ms ease-in-out;
+        }
+
+        .dot {
+            border-radius: 50px;
+            width: 60px;
+            height: 60px;
+            animation: shadow 1.9s ease-in-out infinite;
+            position: absolute;
+            top: 21%;
+        }
+
+        .space {
+            margin-right: 6px;
+        }
+
+        .Nebula, footer a {
+          -webkit-transition: -webkit-transform 0.4s;
+          transition: transform 0.4s;
+        }
+      
+        .Nebula:hover, footer a:hover {
+          -webkit-transform: scale(1.1) rotate(0.01deg);
+          transform: scale(1.1);
+          display: inline-block;
+        }
+
+        footer a {
+          display: inline-block;
+        }
+
+        footer {
+          position: fixed;
+          bottom: 0;
+          left: 25px;
+          display: flex;
+          float: right;
+          background-color: #112442;
+          width: 100%;
+          border: none;
+        }
+
+        .Nebula {
+          right: 40%;
+        }
+
+        .flexy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hlt {
+            background-color: #061328;
+            width: 132px;
+            border-radius: 6px;
+        }
+
+        .hltc {
+            display: grid;
+            justify-items: center;
+            font-family: pro;
+            color: white;
+            font-size: 14px;
+            margin-right: 12px;
+					 	cursor: pointer;
+        }
+    </style>
+</head>
+    <body>
+        <div class="home">
+            <img src="images/cyclone2.png" class="logo" onclick="redAlert();">
+            <h2 class="title">Cyclone</h2>
+            <div class="dot"></div>
+            <p>
+              Helping make an unrestricted internet with seemless network speeds.
+            </p>
+            <div class="flexy">
+                <div class="hltc" onclick="window.goToPage('youtube.com');" >
+                    <img class="hlt" src="images/YouTube.png" alt="YouTube">
+                    <h1>YouTube</h1>
+                </div>
+							
+                <div class="hltc" onclick="window.goToPage('discord.com');" >
+                    <img class="hlt" src="images/discord.jpg" alt="YouTube">
+                    <h1>Discord</h1>
+                </div>
+							
+                <div class="hltc" onclick="window.goToPage('now.gg/games.html');" >
+                    <img class="hlt" src="images/nowgg.png" alt="YouTube">
+                    <h1>Now.GG</h1>
+                </div>
+							
+                <div class="hltc" onclick="window.goToPage('play.geforcenow.com');" >
+                    <img class="hlt" src="images/geforce.png" alt="YouTube">
+                    <h1>Geforce Now</h1>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+          <a onclick="window.open('https://discord.gg/nPAy6HZSYB');"> Cyclone ©️ Nebula Services 2022 </a><br>
+          <img class="Nebula" src="/images/Nebula.png" width="20in" alt="Nebula" style="border-radius: 50%;" onclick="window.open('https://discord.gg/nPAy6HZSYB');"></img>
+        </footer>
+    </body>
+</html>

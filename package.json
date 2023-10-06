@@ -1,0 +1,19 @@
+{
+  "name": "cyclone",
+  "version": "1.0.0",
+  "description": "An incredibly fast web that provides great support for websites",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-tree": "^2.1.0",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "node-fetch": "^2.6.7",
+    "node-static": "^0.7.11"
+  }
+}
